@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Private Message</title>
+  <style>
+    body {
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      background-image: url(11.jpg);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #2e2e3e;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #000;
+      text-align: center;
+      width: 300px;
+    }
+    input {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 10px;
+      width: 100%;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #870808;
+      color: white;
+      border: none;
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #messageBox {
+      display: none;
+      margin-top: 20px;
+      text-align: left;
+      background: #444;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>only u know the code <3 </h2>
+    <input type="password" id="accessCode" placeholder="Access Code" />
+    <button onclick="verifyCode()">Login</button>
+    <div id="messageBox">
+      <h3>T:</h3>
+      <p>I LOVE YOU SO MUCH!.</p>
+    </div>
+  </div>
+
+  <script>
+    const correctCode = "444";
+
+    function verifyCode() {
+      const input = document.getElementById("accessCode").value;
+      if (input === correctCode) {
+        document.getElementById("messageBox").style.display = "block";
+      } else {
+        alert("Wrong code!");
+      }
+    }
+  </script>
+
+</body>
+</html>
